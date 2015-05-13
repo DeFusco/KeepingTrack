@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KeepTrack and LongRun</title>
+<link rel="stylesheet" type="text/css" href="track.css"/>
+</head>
+
+<body>
+
+
+
+
+
+<strong style= "font-size:30px; color:red; font-family: cursive"> KeepTrack </strong>
+
+<p>
+This is the Long Run page!
+</p>
+<script>
+function runnerMan()
+{
+	var runner = ["One Mile", "Two Miles", "Three Miles", "Four Miles", "Five Miles"];
+	var rand = runner[Math.floor(runner.length * Math.random())]
+	//document.write(rand);
+	window.alert(rand);
+}
+
+
+</script>
+
+<p>
+Click the button below to determine a distance and time for your long run.
+</p>
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="phazerFunction()"> Run Phazer </button>
+</p>
+
+
+<p id = "test"></p>
+<script>
+function phazerFunction()
+{
+	<!--runner = ["One Mile", "Two Miles", "Three Miles", "Four Miles", "Five Miles"]; -->
+	<!-- var ran = Math.random(0,4);-->
+	<!--document.getElementByID("test").innerHTML = runnerMan(Math.random() * 4);-->
+	//document.write(runnerMan());
+	runnerMan();
+	
+}
+</script>
+
+<script>
+
+
+
+
+</script>
+<img src= "http://slco.org/recreation/jlsorenson/youthSports/images/Track_and_Field.jpg" style = "width:1225px; height: 370px;" />
+</body>
+

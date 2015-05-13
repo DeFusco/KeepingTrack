@@ -1,0 +1,50 @@
+body
+{
+	background-color: #FFFFF0;
+	text-align: center;
+	/* background-image: url("file:///Users/andrewdefusco/Desktop/Legit%20html%20$wag/KeepTrack/runFile.html"); */
+    /* background-color: #2ab6c7; */
+    
+    
+    
+    .button {
+   border-top: 1px solid #9dc8e3;
+   background: #ed0000;
+   background: -webkit-gradient(linear, left top, left bottom, from(#0791ed), to(#ed0000));
+   background: -webkit-linear-gradient(top, #0791ed, #ed0000);
+   background: -moz-linear-gradient(top, #0791ed, #ed0000);
+   background: -ms-linear-gradient(top, #0791ed, #ed0000);
+   background: -o-linear-gradient(top, #0791ed, #ed0000);
+   padding: 16px 32px;
+   -webkit-border-radius: 22px;
+   -moz-border-radius: 22px;
+   border-radius: 22px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 16px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+   border-top-color: #fa5cef;
+   background: #fa5cef;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b455c;
+   background: #1b455c;
+   }
+   
+
+
+}
+
+
+
+
+h4{ background-color: red;}
+

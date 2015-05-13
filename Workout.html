@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KeepTrack and Workout</title>
+<link rel="stylesheet" type="text/css" href="track.css"/>
+</head>
+
+<body>
+</h4><strong style= "font-size:30px; color:red; font-family: cursive"> KeepTrack </strong>
+
+
+<script>
+function workoutMan()
+{
+	var runner = ["push-ups", "sit-ups", "plank", "squats", "curl-ups"];
+	rand = runner[Math.floor(runner.length * Math.random())];
+	window.alert(rand);
+	if(rand == "plank")
+		{
+			window.alert("30 seconds per plank")
+		}
+	numFunction(rand);
+}
+</script>
+
+
+
+
+
+<p>
+This is the Workout page!
+</p>
+<p>
+Click the button below to determine a workout type and amount.
+</p>
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="workoutFunction()"> Workout Phazer </button></a>
+
+</p>
+<p id = "test"></p>
+<script>
+
+
+function workoutFunction()
+{
+
+	workoutMan();
+	
+}
+</script>
+
+<p>
+If you do not like the amount randomly selected for you, click the amount button for a new random amount.
+</p>
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="amtFunction()"> Amount </button></a>
+
+</p>
+
+
+<script>
+function amtFunction()
+{
+	numFunction();
+}
+</script>
+
+
+
+
+<!-- This function tells the user the amount of their specific workout type -->
+<script>
+function numFunction()
+{
+	var nums = [5, 10, 15, 20, 25];
+	var rando = nums[Math.floor(nums.length * Math.random())];
+	window.alert("The amount of " + rand + " that you need to complete is: " + rando);
+}
+</script>
+
+
+
+
+
+
+<!-- ------------------------------------------------------------------------ -->
+
+<!-- This is the treadmill workout button -->
+
+<p>The treadmill button is designed to help set a time and pace for your run. </p>
+<p>There will be a short workout routine that follows. If you stop your set run early, more workout time will be added. </p>
+
+<p>
+<a href= "file:///Users/andrewdefusco/Desktop/Legit%20html%20$wag/KeepTrack/TreadmillRun.html">
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="runFunction()"> Treadmill Run </button></a>
+
+</p>
+
+<img src= "http://slco.org/recreation/jlsorenson/youthSports/images/Track_and_Field.jpg" style = "width:1225px; height: 370px;" />
+
+</body>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KeepTrack</title>
+<link rel="stylesheet" type="text/css" href="track.css"/>
+</head>
+
+<body>
+</h4><strong style= "font-size:30px; color:red; font-family: cursive"> KeepTrack </strong>
+
+<p>
+This is the Treadmill Workout page!
+</p>
+
+
+
+<p id = "demo"></p>
+
+<script>
+var myVar = setInterval(function() {myTimer()}, 1000);
+
+function myTimer()
+{
+	var d = new Date();
+	document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+}
+</script>
+
+
+<!--  <button onclick = "clearInterval(myVar)">Stop Time</button> -->
+
+
+
+<h7 style= "font-size: 100px;">
+<script>
+var i, timer, divide;
+i = 0;
+divide = 10;
+function start()
+{
+	timer = self.setInterval("increment()", (1000/divide))
+}
+function increment()
+{
+	i++;
+	document.getElementById("timer_out").innerHTML = (i/divide);
+	//if(i = 100)
+	//	{
+	//		i = 1.00;
+	//	}
+}
+function stop()
+{
+	clearInterval(timer);
+	timer = null;
+	
+}
+function reset()
+{
+	stop();
+	i = 0;
+	document.getElementById("timer_out").innerHTML = (i/divide);
+}
+</script>
+<span id = timer_out>
+<strong style= "font-size:100px;"> 0.00 </strong>
+</span>
+<br />
+<br />
+<button style= "width:100px; height: 30px; font-size: 10px;" id = "start_timer" onclick = "start()">
+Start
+</button>
+<button style= "width:100px; height: 30px; font-size: 10px;" id = "stop_timer" onclick = "stop()">
+Stop
+</button>
+<button style= "width:100px; height: 30px; font-size: 10px;" id = "reset_timer" onclick = "reset()">
+Reset
+</button>
+
+</h7>
+
+
+
+
+<p>
+Click the button below to determine a workout amount based off of your time on the treadmill!
+</p>
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="treadFunction()"> Tread Phazer </button>
+</p>
+
+
+<script>
+function treadFunction()
+{
+	var amount = window.prompt("How many seconds did you run today?");
+	 amountA = amount / 60;
+	 window.alert("You ran for " + amountA + " minutes");
+	 
+	if(amountA < 10)
+		{
+			window.alert("Click work 1 button to discover your workout amount!")
+		}
+	if(amountA < 30 && amountA > 10)
+		{
+		window.alert("Click work 2 button to discover your workout amount!")
+		}
+	if(amountA > 30)
+	{
+		window.alert("Click work 3 button to discover your workout amount!")
+	}
+	
+}
+</script>
+
+
+
+
+<script>
+function workoutMan()
+{
+	runner = ["push-ups", "sit-ups", "plank", "squats", "curl-ups"];
+	rand = runner[Math.floor(runner.length * Math.random())];
+	window.alert(rand);
+	if(rand == "plank")
+		{
+			window.alert("30 seconds per plank")
+		}
+	numFunction(rand);
+}
+</script>
+
+
+
+<script>
+function workout2Man()
+{
+	runner = ["push-ups", "sit-ups", "plank", "squats", "curl-ups"];
+	rand = runner[Math.floor(runner.length * Math.random())];
+	window.alert(rand);
+	if(rand == "plank")
+		{
+			window.alert("30 seconds per plank")
+		}
+	num2Function(rand);
+}
+</script>
+
+<script>
+function workout3Man()
+{
+	runner = ["push-ups", "sit-ups", "plank", "squats", "curl-ups"];
+	rand = runner[Math.floor(runner.length * Math.random())];
+	window.alert(rand);
+	if(rand == "plank")
+		{
+			window.alert("30 seconds per plank")
+		}
+	num3Function(rand);
+}
+</script>
+
+
+
+
+<p>
+Click the button below based off of your results to determine a workout type and amount.
+</p>
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="workoutFunction()"> Work 1 </button></a>
+
+</p>
+<p id = "test"></p>
+<script>
+
+
+function workoutFunction()
+{
+
+	workoutMan();
+	
+}
+</script>
+
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="workout2Function()"> Work 2 </button></a>
+
+</p>
+
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="workout3Function()"> Work 3 </button></a>
+
+</p>
+
+
+<p>
+If you do not like the amount randomly selected for you, click the amount button for a new random amount.
+</p>
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="amtFunction()"> Amount 1 </button></a>
+
+</p>
+
+
+<script>
+function amtFunction()
+{
+	numFunction();
+}
+</script>
+
+<script>
+function amt2Function()
+{
+	num2Function();
+}
+</script>
+
+
+<script>
+function amt3Function()
+{
+	num3Function();
+}
+</script>
+
+
+
+<!-- This function tells the user the amount of their specific workout type -->
+<script>
+function numFunction()
+{
+	var nums = [15, 20, 25, 30, 35];
+	var rando = nums[Math.floor(nums.length * Math.random())];
+	window.alert("The amount of " + rand + " that you need to complete is: " + rando);
+}
+</script>
+
+
+
+
+
+
+
+<p id = "test"></p>
+<script>
+
+
+function workout2Function()
+{
+
+	workout2Man();
+	
+}
+</script>
+
+<script>
+
+
+function workout3Function()
+{
+
+	workout3Man();
+	
+}
+</script>
+
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="amt2Function()"> Amount 2</button></a>
+
+</p>
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="amt3Function()"> Amount 3</button></a>
+
+</p>
+
+
+<script>
+function num2Function()
+{
+	var nums = [10, 15, 20, 25, 30];
+	var rando = nums[Math.floor(nums.length * Math.random())];
+	window.alert("The amount of " + rand + " that you need to complete is: " + rando);
+}
+</script>
+
+
+
+<script>
+function num3Function()
+{
+	var nums = [5, 10, 15, 20, 25];
+	var rando = nums[Math.floor(nums.length * Math.random())];
+	window.alert("The amount of " + rand + " that you need to complete is: " + rando);
+}
+</script>
+
+
+
+
+</body>
+
+
+
+
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KeepTrack and Diet</title>
+<link type="text/css" rel="stylesheet" href="track.css"/>
+
+</head>
+
+
+<body>
+<strong style= "font-size:30px; color:red; font-family: cursive"> KeepTrack </strong>
+
+<p>
+This is the Diet page!
+</p>
+
+<p>
+Click the button below to input your current age, weight, gender, and height.
+</p>
+<p>
+This will provide you with information on calorie intake.
+</p>
+
+
+
+
+
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="calorieFunction()"> Input Calorie Intake </button></a>
+
+</p>
+
+<script>
+function calorieFunction()
+{
+	 var calo = window.prompt("How many calories have you consumed today?");
+	 caloA = calo
+	 ageFunction(caloA);
+}
+</script>
+
+
+<!-- This is the button for prompting age. -->
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="ageFunction()"> Input Age </button></a>
+
+</p>
+
+<script>
+function ageFunction()
+{
+	var age = window.prompt("What is your age?");
+	ageA = age;
+	weightFunction(ageA);
+}
+</script>
+
+
+
+
+
+
+<!-- This is the button for prompting weight. -->
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="weightFunction()"> Input weight </button></a>
+
+</p>
+
+<script>
+
+function weightFunction()
+{
+	var weight = window.prompt("What is your weight in pounds?");
+	weightA = weight;
+	genderFunction(weightA);
+}
+</script>
+
+
+
+
+
+
+
+
+<!-- This is the button for prompting gender. -->
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="genderFunction()"> Input gender </button></a>
+
+</p>
+
+<script>
+function genderFunction()
+{
+	male = ""
+	female = ""
+	var gender = window.prompt("What is your gender?");
+	genderA = gender;
+	if(genderA == "male")
+		{
+			male = genderA;
+		}
+	else if(genderA == "female")
+		{
+			female = genderA
+		}
+	heightFunction(genderA);
+	bmrFnction(genderA);
+}
+</script>
+
+
+
+
+
+<!-- This is the button for prompting height. -->
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="heightFunction()"> Input height </button></a>
+
+</p>
+
+<script>
+function heightFunction()
+{
+	var height = window.prompt("What is your height in inches? Ex: 5ft = 60 inches");
+	heightA = height;
+	activityFunction(heightA);
+}
+</script>
+
+
+
+
+
+
+
+<!-- This is the button for prompting activity rate. -->
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="activityFunction()"> Input Activity Amount </button></a>
+
+</p>
+
+<script>
+function activityFunction()
+{
+	var activity = window.prompt("How active are you? Input: no activity, light activity, moderate activity, strong activity, or intense activity");
+	activityA = activity;
+	bmrFunction(activityA);
+}
+cFunction(activityA);
+</script>
+
+
+
+
+<!-- This is the button for calculating BMR. -->
+<p>
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="bmrFunction()"> Calculate BMR </button></a>
+
+</p>
+
+<script>
+function bmrFunction()
+{
+	bmr = 66 + (6.3 * weightA) + (12.9 * heightA) - (5.8 * ageA);
+	var bmr2 = 655 + (4.3 * weightA) + (4.2 * heightA) - (4.7 * ageA);
+	if(genderA == male)
+	{
+		
+		window.alert("Your bmr is " + bmr + "bmr is the amount of calories you burn if you do nothing all day!");
+		cFunction(bmr);
+	}
+	else if(genderA == female)
+	{
+	//	var bmr2 = 655 + (4.3 * weightA) + (4.2 * heightA) - (4.7 * ageA);
+		window.alert("Your bmr is " + bmr2 + "bmr is the amount of calories you burn if you do nothing all day!");
+		cFunction(bmr2);
+	}
+	
+}
+</script>
+
+
+
+
+
+
+
+
+<!-- This is the function to determine calorie intake -->
+<script>
+function cFunction()
+{
+	var noA = 0; <!-- No Activity -->
+	var lightA = 0;
+	var moderateA = 0;
+	var strongA = 0;
+	var intenseA = 0;
+	if(activityA == "no activity")
+		{
+			noA = (bmr * .2) + bmr;
+			none = noA - calo;
+			window.alert("The amount of calories you need to intake in one day to maintain your current weight are " + noA);
+			window.alert("You need to consume " + none + " more calories")
+		}
+	else if(activityA == "light activity")
+	{
+		lightA = (bmr * .3) + bmr;
+		lie = lightA - calo;
+		window.alert("The amount of calories you need to intake in one day to maintain your current weight are " + lightA);
+		window.alert("You need to consume " + lie + " more calories")
+	}
+	else if(activityA == "moderate activity")
+	{
+		moderateA = (bmr * .4) + bmr;
+		mody = moderateA - calo;
+		window.alert("The amount of calories you need to intake in one day to maintain your current weight are " + moderateA);
+		window.alert("You need to consume " + mody + " more calories")
+	}
+	else if(activityA == "strong activity")
+	{
+		strongA = (bmr * .5) + bmr;
+		stro = strongA - calo;
+		window.alert("The amount of calories you need to intake in one day to maintain your current weight are " + strongA);
+		window.alert("You need to consume " + stro + " more calories")
+	}
+	else if(activityA == "intense activity")
+	{
+		intenseA = (bmr * .6) + bmr;
+		blop = intenseA - calo;
+		window.alert("The amount of calories you need to intake in one day to maintain your current weight are " + intenseA);
+		window.alert("You need to consume " + blop + " more calories")
+	}
+}
+</script>
+
+
+<!-- This function is for the food aspect of the calorie count graph -->
+<script>
+function foodFunction()
+{
+	food = window.prompt("What substances have you consumed today?");
+	foodA = food;
+	
+	<button id = "myBtn" value = foodA onclick = "testFunction()">Test</button>
+
+	<p id = "demo"></p>
+
+	<script>
+	function testFunction()
+	{
+		var x = document.getElementById("myBtn").value;
+		document.getElementById("demo").innerHTML = x;
+	}
+	
+}
+</script>
+
+<!-- This function is for the calorie aspect of the calorie count graph -->
+<script>
+function calorieFunction()
+{
+	 calo = window.prompt("How many calories have you consumed today?");
+}
+</script>
+
+<a href= "file:///Users/andrewdefusco/Desktop/Legit%20html%20$wag/KeepTrack/Health.html">
+<button style= "width:200px; height: 60px; font-size: 20px; background-color: #32dcff;" onclick ="healthFunction()"> Healthy Options </button></a>
+
+<p id="transition"></p>
+
+
+
+<script>
+function healthFunction()
+{
+	 document.getElementById("transition").innerHTML;
+}
+</script>
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
